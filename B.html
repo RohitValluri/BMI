@@ -5,37 +5,58 @@
 <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
 
 <style>
-    * {
-        background-color: rgb(227, 236, 233);
+    #b {
+        /* background-color: rgb(227, 236, 233); */
+        font-size: 20px;
+        background-image: url("p2.jpg")
+        
     }
+
+    #button{
+        background-color: #70b2d1;
+  border-style: groove;
+  
+  padding: 16px 32px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+#i{
+    color: black;
+}
 
 	input{
 	 padding:5px;
 	 margin:5px;
+     align-self: center;
+     font-family: Georgia, 'Times New Roman', Times, serif;
+     color: black;
 	 
 	}
 
     #root{
-		margin-left: 10px;
-		font-family: 'Times New Roman', Times, serif;
-		padding-left: 30px;
+        margin-top: 10%;
 	}
 
 	#solution{
-        margin-top: 10px;
-		margin-left: 15px;
-		font-family: 'Times New Roman', Times, serif;
-		padding-left:30px ;
+        border:black 2px solid;
+                padding:10px 100px 10px 60px;
+                margin-top: 30px;
+                margin-left:650px;
+                width:4%;
+                text-align: center;
         } 
 				
 </style>
 	
 </head>
-<body>
+<body id="b">
 	<div id="title"></div>
 	
-	<div id="root"></div>	
-	<div id="solution"></div>
+	<div id="root" align="center"></div>	
+	<div id="solution">Result</div>
 </body>
 
 </html>
@@ -53,10 +74,10 @@ ReactDOM.render(<Title />, document.getElementById("title"));
 class Input extends React.Component {
 	render() {
 		return (
-				<div id="button">	
-					<input type="number" name="weight" placeholder="Enter the weight"/><br/>
+				<div>	
+					<input id="i" type="number" name="weight" placeholder="Enter the weight"/><br/>
 					<input type="number" name="feet"  placeholder="Enter Feets"/><br/>
-					<button onClick={this.result} > Calculate BMI </button>
+					<button id="button" onClick={this.result} > Calculate BMI </button>
 				</div>
 			);
 		}
